@@ -1,41 +1,125 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <!-- Compiled and minified CSS -->
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-    <body>
-        <nav>
+<body>
+    <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Khatam Calculator</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Home</a></li>
-            <li><a href="badges.html">By Pages</a></li>
-            <li><a href="collapsible.html">By Days</a></li>
-          </ul>
+            <a href="#" class="brand-logo">Khatam Calculator</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Home</a></li>
+                <li><a href="badges.html">By Pages</a></li>
+                <li><a href="collapsible.html">By Days</a></li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
     <div class="container" id="home-section">
-      <div class="center-align">
-      <h1>Khatam Calculator</h1>
-      <h4>This is a simple web app that helps you gauge how long it will take for you to khatam the Quran</h4>
-      <a class="waves-effect waves-light btn">By Pages</a>
-      <a class="waves-effect waves-light btn">By Days</a>
-      </div>
+        <div class="center-align">
+            <h1>Khatam Calculator</h1>
+            <h4>This is a simple web app that helps you gauge how long it will take for you to khatam the Quran</h4>
+            <a class="waves-effect waves-light btn"href="#bypages-section">By Pages</a>
+            <a class="waves-effect waves-light btn" href="#bydays-section">By Days</a>
+        </div>
     </div>
-            
-      <!--JavaScript at end of body for optimized loading-->
-      <!-- Compiled and minified JavaScript -->
+
+    <div class="container" id="bypages-section">
+        <div class="center-align">
+            <h1>By Pages</h1>
+            <h4>Find out how many days it will take to khatam by specifying how many pages you plan to read daily</h4>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="number" type="number" class="validate">
+                    <label for="number">Number of days</label>
+                    <span class="helper-text" data-error="wrong">Enter the number of days you hope
+                        to khatam by</span>
+                    <button class="btn waves-effect waves-light"  onclick="calculateDays()" type="button">Calculate
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <div class="col s12">
+                        <div class="card-panel teal lighten-2">
+                            <span class="" id="results">
+                                Your result will display here after you click the 'Calculator' button
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="bydays-section">
+        <div class="center-align">
+            <h1>By Days</h1>
+            <h4>Find out how many days it will take to khatam by specifying how many pages you plan to read daily</h4>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="days" type="number" class="validate">
+                    <label for="days">Number of pages</label>
+                    <span class="helper-text" data-error="wrong">Enter the number of pages you hope to khatam by</span>
+                    <button class="btn waves-effect waves-light"  onclick="calculatePages()" type="button">Calculate
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <div class="col s12">
+                        <div class="card-panel teal lighten-2">
+                            <span class="" id="results2">
+                                Your result will display here after you click the 'Calculator' button
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">About App</h5>
+                    <p class="grey-text text-lighten-4">This is a coding project that was done during a Code Hero
+                        session to gauge how long it will take for one to khatam the Quran.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">My Other Apps</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Basic Calculator</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Grade Calculator</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">SG Bill Calculator</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Zakat Calculator</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Quiz App</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Code Hero Project by Tengku Hafidz
+                <a class="grey-text text-lighten-4 right" href="#!">My Github</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+    <script src="main.js"></script
+
     </body>
-  </html>
+</html>
